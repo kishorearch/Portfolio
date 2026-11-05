@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kishore E | Data Analyst Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Manrope:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07110f;--card:rgba(255,255,255,.05);--bd:rgba(255,255,255,.12);--tx:#effaf5;--mu:#9bb8ac;--a:#f5b942;--b:#34d399;--c:#fb7185;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f6f8f1;--card:rgba(255,255,255,.8);--bd:rgba(20,70,50,.16);--tx:#10261e;--mu:#4d6b5f;--a:#b7791f;--b:#047857;--c:#be123c}}
+:root[data-theme="light"]{--bg:#f6f8f1;--card:rgba(255,255,255,.8);--bd:rgba(20,70,50,.16);--tx:#10261e;--mu:#4d6b5f;--a:#b7791f;--b:#047857;--c:#be123c}
+:root[data-theme="dark"]{--bg:#07110f;--card:rgba(255,255,255,.05);--bd:rgba(255,255,255,.12);--tx:#effaf5;--mu:#9bb8ac;--a:#f5b942;--b:#34d399;--c:#fb7185}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:var(--bg);color:var(--tx);font-family:'Manrope',system-ui,sans-serif;line-height:1.65;overflow-x:hidden}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif}
+.mono{font-family:'IBM Plex Mono',ui-monospace,monospace}
+.aur{position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(40% 30% at 10% 5%,color-mix(in srgb,var(--b) 28%,transparent),transparent),radial-gradient(35% 30% at 90% 35%,color-mix(in srgb,var(--a) 22%,transparent),transparent),radial-gradient(40% 30% at 50% 100%,color-mix(in srgb,var(--c) 18%,transparent),transparent)}
+main,nav,footer{position:relative;z-index:2}
+nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:12px 5vw;backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 70%,transparent);border-bottom:1px solid var(--bd);z-index:20}
+nav b{font-family:'Playfair Display',Georgia,serif;font-size:1.1rem;letter-spacing:.04em}nav div{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
+nav a{color:var(--mu);text-decoration:none;font-size:.85rem}nav a:hover{color:var(--a)}
+.theme{background:none;border:1px solid var(--bd);color:var(--tx);border-radius:50%;width:32px;height:32px;cursor:pointer}
+section{padding:90px 5vw 20px;max-width:1100px;margin:auto}
+h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:6px}
+.grad,h2 span{background:linear-gradient(90deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:var(--mu);margin-bottom:26px}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding-top:110px}
+.hero h1{font-size:clamp(2.8rem,9vw,5.8rem);line-height:1.02;margin:10px 0;font-weight:800}
+.tag{color:var(--a);font-size:.82rem}
+.type{font-size:clamp(1rem,2.4vw,1.35rem);color:var(--mu);min-height:2em}
+.type i{display:inline-block;width:2px;height:1.1em;background:var(--a);vertical-align:middle;animation:bl 1s steps(1) infinite}@keyframes bl{50%{opacity:0}}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.btn{padding:12px 22px;border-radius:12px;text-decoration:none;color:var(--tx);border:1px solid var(--bd);background:var(--card);font-weight:700;transition:.25s}
+.btn.p{background:linear-gradient(90deg,var(--a),var(--b));border:0;color:#07110f}
+.btn:hover{transform:translateY(-3px)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:14px;margin-top:44px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:20px;backdrop-filter:blur(10px)}
+.stat b{font-family:'Playfair Display',Georgia,serif;font-size:2.1rem;display:block;color:var(--a)}.stat small{color:var(--mu)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.card h3{margin:6px 0 8px}.card p,.card li{color:var(--mu);font-size:.93rem}
+.card ul{padding-left:18px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.chip{font-size:.76rem;padding:4px 11px;border-radius:8px;border:1px solid var(--bd);color:var(--b)}
+.tl{border-left:2px solid var(--bd);margin-left:8px;padding-left:26px}
+.tl .card{margin-bottom:18px;position:relative}
+.tl .card:before{content:"";position:absolute;left:-36px;top:26px;width:18px;height:18px;border-radius:50%;background:var(--a);box-shadow:0 0 0 5px var(--bg),0 0 16px var(--b)}
+.tl small{color:var(--b)}
+.rv{opacity:0;transform:translateY(30px);transition:1s}.rv.on{opacity:1;transform:none}
+ul.cl{list-style:none;padding:0}ul.cl li{padding:10px 0;border-bottom:1px solid var(--bd);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--tx)}ul.cl span{color:var(--mu);font-size:.85rem}
+footer{text-align:center;color:var(--mu);padding:60px 5vw 40px;font-size:.85rem}
+</style></head><body>
+<div class="aur"></div>
+<nav><b class="grad">Kishore E</b><div><a href="#about">About</a><a href="#skills">Skills</a><a href="#exp">Experience</a><a href="#projects">Projects</a><a href="#certs">Certifications</a><a href="#contact">Contact</a><button class="theme" id="th" aria-label="Toggle theme">◐</button></div></nav>
+<main>
+<section class="hero" id="home">
+<span class="tag mono">&gt; hello, I’m</span>
+<h1 class="grad">Kishore E</h1>
+<div class="type"><span id="ty"></span><i></i></div>
+<p class="sub" style="max-width:640px;margin-top:14px">Computer Science graduate from Chennai who turns raw data into clean dashboards, SQL insights and decisions people can act on.</p>
+<div class="btns"><a class="btn p" href="#projects">View Projects</a><a class="btn" href="#exp">Experience</a><a class="btn" href="mailto:kishoreoff65@gmail.com">Say Hello</a></div>
+<div class="stats"><div class="card stat"><b>4</b><small>Projects built</small></div><div class="card stat"><b>8,500+</b><small>Transactions analysed</small></div><div class="card stat"><b>40%</b><small>Less manual reporting</small></div><div class="card stat"><b>~30%</b><small>Faster SQL queries</small></div></div>
+</section>
+
+<section id="about" class="rv"><h2>About <span>Me</span></h2><p class="sub">B.Sc. Computer Science, 2021 – 2024</p>
+<div class="grid"><div class="card"><p>Results-driven Computer Science graduate with hands-on experience in SQL, Python, Power BI, Tableau and Advanced Excel. I work across data cleaning, exploratory data analysis, ETL, dashboard development and KPI reporting, turning raw data into insights that support data-driven decisions. I’m looking for an entry-level Data Analyst or SQL Developer role.</p></div>
+<div class="card"><h3>Education</h3><p><b style="color:var(--tx)">Bachelor of Science in Computer Science</b><br>Jaya Govind Harigopal Agarwal Agarsen College, Chennai<br><span class="tag mono">2021 – 2024 · CGPA 6.75</span></p></div></div></section>
+
+<section id="skills" class="rv"><h2>Technical <span>Skills</span></h2><p class="sub">The tools I use to clean, explore and explain data.</p>
+<div class="grid">
+<div class="card"><h3>Programming &amp; Querying</h3><div class="chips"><span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">Matplotlib</span><span class="chip">Seaborn</span><span class="chip">SQL (MySQL)</span></div></div>
+<div class="card"><h3>Data Visualization</h3><div class="chips"><span class="chip">Power BI</span><span class="chip">DAX</span><span class="chip">Data Modelling</span><span class="chip">Tableau</span><span class="chip">Advanced Excel</span><span class="chip">Pivot Tables</span><span class="chip">VLOOKUP</span></div></div>
+<div class="card"><h3>Data Competencies</h3><div class="chips"><span class="chip">Data Cleaning</span><span class="chip">EDA</span><span class="chip">ETL</span><span class="chip">KPI Reporting</span><span class="chip">Dashboard Development</span><span class="chip">Statistical Analysis</span></div></div>
+<div class="card"><h3>Tools &amp; Soft Skills</h3><div class="chips"><span class="chip">Web Scraping</span><span class="chip">BeautifulSoup</span><span class="chip">Jupyter</span><span class="chip">Git</span><span class="chip">Problem Solving</span><span class="chip">Teamwork</span><span class="chip">Attention to Detail</span></div></div>
+</div></section>
+
+<section id="exp" class="rv"><h2>Work <span>Experience</span></h2><p class="sub">Professional roles and simulations.</p>
+<div class="tl">
+<div class="card"><small class="mono">09 Sep 2026 — 31 Oct 2026</small><h3>LM - Offroll - Team Leader · Team HR GSA Pvt. Ltd.</h3><p>Appointed as Team Leader, initially posted at Vyasarpadi Hub, Chennai, and deputed to Instakart Services Pvt. Ltd. for a specific assignment, working under the client’s code of conduct, business ethics and policies.</p><div class="chips"><span class="chip">Team Leadership</span><span class="chip">Deputation: Instakart</span><span class="chip">Chennai</span></div></div>
+<div class="card"><small class="mono">2026</small><h3>Data Analyst Intern (Virtual) · Forage – Deloitte Australia</h3><ul><li>Ran data quality checks on large business datasets, resolving inconsistencies to keep analytical outputs accurate and reliable.</li><li>Analysed sales and operational data with Excel and Python (Pandas, Matplotlib) to spot trends and deliver structured reports to stakeholders.</li></ul></div>
+</div></section>
+
+<section id="projects" class="rv"><h2>Featured <span>Projects</span></h2><p class="sub">End-to-end work in Python, SQL and BI.</p>
+<div class="grid">
+<div class="card"><span class="tag mono">Machine Learning</span><h3>E-commerce Customer Churn Analysis &amp; Prediction</h3><p>End-to-end ML pipeline over 1,300+ customer records to predict churn and flag high-risk accounts, with an interactive Streamlit interface showing dynamic visuals and real-time KPIs for churn drivers.</p><div class="chips"><span class="chip">Python</span><span class="chip">Streamlit</span><span class="chip">Scikit-Learn</span></div></div>
+<div class="card"><span class="tag mono">EDA</span><h3>Retail Data Analysis &amp; Insights</h3><p>Cleaned and transformed large retail datasets for high data integrity, then ran EDA to extract key business metrics and visualise seasonal trends and purchasing patterns.</p><div class="chips"><span class="chip">NumPy</span><span class="chip">Pandas</span><span class="chip">Matplotlib</span><span class="chip">Seaborn</span></div></div>
+<div class="card"><span class="tag mono">Business Intelligence</span><h3>Blinkit Sales Analysis Dashboard</h3><p>Excel and Power BI solution with DAX measures tracking sales, ratings and item-level KPIs across 8,500+ transactions. Slicers for outlet size, location tier and item type cut manual reporting effort by 40%.</p><div class="chips"><span class="chip">Excel</span><span class="chip">Power BI</span><span class="chip">DAX</span></div></div>
+<div class="card"><span class="tag mono">Database</span><h3>Hotel Booking Management System</h3><p>Normalised relational database with 6+ tables and complex SQL (joins, subqueries, aggregates, window functions) for booking insights. Indexing strategies reduced query execution time by about 30%.</p><div class="chips"><span class="chip">SQL</span><span class="chip">MySQL</span></div></div>
+</div></section>
+
+<section id="certs" class="rv"><h2>Certifications</h2><p class="sub">Formal training in data and analytics.</p>
+<div class="card"><ul class="cl">
+<li>Data Science and Analytics with AI <span>IT Vedant Education Pvt. Ltd. · Excel, MySQL, Power BI, Tableau, Python, ML</span></li>
+<li>IBM Python for Data Science <span>IBM · via IT Vedant Education</span></li>
+<li>IBM Data Analysis with Python <span>IBM · via IT Vedant Education</span></li>
+</ul></div></section>
+
+<section id="contact" class="rv"><h2>Let’s <span>Connect</span></h2><p class="sub">Open to entry-level Data Analyst and SQL Developer roles.</p>
+<div class="btns"><a class="btn p" href="mailto:kishoreoff65@gmail.com">✉ Email</a><a class="btn" href="https://www.linkedin.com/in/e-kishore" target="_blank" rel="noopener">LinkedIn</a><a class="btn" href="tel:+918680863698">📞 8680863698</a></div></section>
+</main>
+<footer>© 2026 Kishore E · Chennai, India</footer>
+<script>
+(function(){
+var R=["Data Analyst","SQL Developer","Power BI &amp; Tableau Storyteller","Python for Data"].map(function(s){return s.replace('&amp;','&')}),ri=0,ci=0,del=false,t=document.getElementById('ty');
+(function tick(){var w=R[ri];ci+=del?-1:1;t.textContent=w.slice(0,ci);var d=del?35:75;if(!del&&ci===w.length){del=true;d=1400}else if(del&&ci===0){del=false;ri=(ri+1)%R.length;d=300}setTimeout(tick,d)})();
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.classList.add('on')})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(x){io.observe(x)});
+document.getElementById('th').onclick=function(){var r=document.documentElement,l=getComputedStyle(r).getPropertyValue('--bg').trim()==='#f6f8f1';r.setAttribute('data-theme',l?'dark':'light')};
+})();
+</script></body></html>
